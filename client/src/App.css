@@ -1,0 +1,369 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #ecf0f1;
+  --accent-color: #1abc9c;
+  --hover-color: #16a085;
+  --text-color: #ffffff;
+  --border-color: #bdc3c7;
+}
+
+.App {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 600px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid var(--border-color);
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+}
+
+.post:hover {
+  box-shadow: rgba(44, 62, 80, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.post .title {
+  flex: 20%;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  display: grid;
+  place-content: center;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
+}
+
+.post .body {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.post .footer {
+  flex: 20%;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer .username {
+  flex: 50%;
+}
+
+.footer .buttons {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.likeBttn {
+  color: rgba(250, 250, 250, 0.8);
+}
+
+.unlikeBttn {
+  color: var(--text-color);
+}
+
+.buttons label {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+/* CREATE POST PAGE CSS */
+.createPostPage {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  border: none;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+span {
+  color: red;
+}
+
+/* Registration Form Container */
+.registrationForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form Container */
+.formContainer {
+  background-color: var(--text-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar .links {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .loggedInContainer {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.navbar h1 {
+  text-align: right;
+  margin-right: 10px;
+  color: var(--text-color);
+  font-weight: lighter;
+}
+
+/* INDIVIDUAL POST */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+}
+
+.rightSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSide .addCommentContainer {
+  flex: 20%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+}
+
+.addCommentContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
+
+.addCommentContainer button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.addCommentContainer input {
+  border: 2px solid var(--primary-color);
+}
+
+.rightSide .listOfComments {
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listOfComments .comment {
+  width: 70%;
+  height: auto;
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#individual {
+  height: 500px;
+  width: 600px;
+}
+
+#individual .title,
+#individual .footer {
+  font-size: 30px;
+}
+
+#individual .body {
+  font-size: 25px;
+}
+
+/* Individual comment container */
+.comment {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container comment  */
+.commentText {
+  flex: 1;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.commentActions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Username styling */
+.userName {
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+/* Button styling */
+.comment button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  border-radius: 3px;
+  width: auto;
+  height: auto;
+}
+
+.comment button:hover {
+  background-color: darkred;
+}
+
+/* LOGIN */
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.loginContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.loginContainer input {
+  border: 2px solid var(--primary-color);
+}
